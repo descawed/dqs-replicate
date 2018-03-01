@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB545165-D016-41A0-8187-48A3DDC5112E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dqsexport</RootNamespace>
+    <AssemblyName>dqsexport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2017|AnyCPU' OR '$(Configuration)|$(Platform)' == 'Release-2016|AnyCPU' OR '$(Configuration)|$(Platform)' == 'Release-2014|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2017|AnyCPU'">
+    <OutputPath>bin\Release-2017\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2014|AnyCPU'">
+    <OutputPath>bin\Debug-2014\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2017|AnyCPU' OR '$(Configuration)|$(Platform)' == 'Debug-2016|AnyCPU' OR '$(Configuration)|$(Platform)' == 'Debug-2014|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2017|AnyCPU'">
+    <OutputPath>bin\Debug-2017\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2014|AnyCPU'">
+    <OutputPath>bin\Release-2014\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2016|AnyCPU'">
+    <OutputPath>bin\Debug-2016\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2016|AnyCPU'">
+    <OutputPath>bin\Release-2016\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug-2014' OR '$(Configuration)' == 'Release-2014'">
+    <Reference Include="Microsoft.Ssdqs, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Ssdqs\v4.0_12.0.0.0__89845dcd8080cc91\Microsoft.Ssdqs.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ssdqs.Studio.Infra, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\DQ\Microsoft.Ssdqs.Studio.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ssdqs.Studio.ViewModels, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\DQ\Microsoft.Ssdqs.Studio.ViewModels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug-2016' OR '$(Configuration)' == 'Release-2016'">
+    <Reference Include="Microsoft.Ssdqs, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Ssdqs\v4.0_12.0.0.0__89845dcd8080cc91\Microsoft.Ssdqs.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ssdqs.Studio.Infra, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\DQ\Microsoft.Ssdqs.Studio.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ssdqs.Studio.ViewModels, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\DQ\Microsoft.Ssdqs.Studio.ViewModels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug-2017' OR '$(Configuration)' == 'Release-2017'">
+    <Reference Include="Microsoft.Ssdqs, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.Ssdqs\v4.0_12.0.0.0__89845dcd8080cc91\Microsoft.Ssdqs.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ssdqs.Studio.Infra, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\DQ\Microsoft.Ssdqs.Studio.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ssdqs.Studio.ViewModels, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\DQ\Microsoft.Ssdqs.Studio.ViewModels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
